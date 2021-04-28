@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension String {
+public extension String {
     public var ab:AttributesDSL {
         return AttributesDSL.init(string: self)
     }
