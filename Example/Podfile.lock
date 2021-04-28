@@ -1,0 +1,16 @@
+PODS:
+  - Lux (0.1.0)
+
+DEPENDENCIES:
+  - Lux (from `../`)
+
+EXTERNAL SOURCES:
+  Lux:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Lux: 58072918dd6d349c81404c42133fcc24e98a3fca
+
+PODFILE CHECKSUM: bf12ea4d8ef71ea147782d68d2fbee4fbeb060b9
+
+COCOAPODS: 1.10.1
