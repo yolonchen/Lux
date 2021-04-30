@@ -13,5 +13,22 @@ public extension String {
     }
 }
 
+extension String {
+    func luxRanges(of subString:String) -> [Range<String.Index>] {
+        
+        var start = self.startIndex
+        let end = self.endIndex
+        
+        var ranges:[Range<String.Index>] = []
+        
+        while let range = self.range(of: subString, range:start..<end ) {
+            ranges.append(range)
+            start = range.upperBound
+        }
+        return ranges
+    }
+}
+
+
 
 

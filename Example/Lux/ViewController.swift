@@ -21,6 +21,8 @@ class ViewController: UIViewController {
             maker.foregroundColor(color: .yellow).range(r: str.range(of: "yellow")!)
             maker.foregroundColor(color: .red).font(f: UIFont.boldSystemFont(ofSize: 20)).range(r: str.range(of: "red")!)
             maker.backgroundColor(color: .cyan).full()
+            maker.backgroundColor(color: .blue).at(first: "很")
+            maker.foregroundColor(color: .purple).at(all: "o")
             maker.backgroundColor(color: .magenta).range(r: str.range(of: "yellow")!)
             maker.ph.line(space: 10).full()
         }

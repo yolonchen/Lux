@@ -63,6 +63,46 @@ public class AttributeMaker {
         }
         attributedKeys.removeAll()
     }
+    
+    public func at(first string:String) -> Void {
+        
+        if let range = self.string.range(of: string) {
+            for key in attributedKeys {
+                let attribute = Attribute.init(range: range, key: key)
+                let key = "\(range.hashValue)_\(key.code)"
+                self.attributes[key] = attribute
+                keys.append(key)
+            }
+        } else {
+            debugPrint("not fount searchSting \(string)")
+        }
+        attributedKeys.removeAll()
+    }
+    
+    public func at(all string:String) -> Void {
+        
+        defer {
+            attributedKeys.removeAll()
+        }
+        
+        let ranges = self.string.luxRanges(of: string)
+        
+        if ranges.count == 0 {
+            debugPrint("not fount searchSting \(string)")
+            
+            return
+        }
+        
+        for range in ranges {
+            for key in attributedKeys {
+                let attribute = Attribute.init(range: range, key: key)
+                let key = "\(range.hashValue)_\(key.code)"
+                self.attributes[key] = attribute
+                keys.append(key)
+            }
+        }
+    }
+
 
     fileprivate func attributeString() -> NSAttributedString {
         let attrStr = NSMutableAttributedString.init(string: self.string)
