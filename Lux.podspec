@@ -30,7 +30,7 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '11.0'
 
-  s.source_files = 'Sources/**/*'
+  s.source_files = 'Sources/Lux/**/*'
   
   # s.resource_bundles = {
   #   'Lux' => ['Lux/Assets/*.png']
