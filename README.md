@@ -22,8 +22,22 @@ pod 'Lux'
 
 ## Author
 
-ts-cyl, yulong.chen@advance.ai
+yulong.chen, yulong.chen@advance.ai
 
 ## License
 
 Lux is available under the MIT license. See the LICENSE file for more info.
+
+## Usege
+
+```
+let str = "这是一个测试字符串呀,yellow,red,想要很长loooooooooooooog很长，能够换行，呵呵呵"
+let attr = str.lux.makeAttributes { (maker) in
+    maker.foregroundColor(color: .orange).full()
+    maker.foregroundColor(color: .yellow).range(r: str.range(of: "yellow")!)
+    maker.foregroundColor(color: .red).font(f: UIFont.boldSystemFont(ofSize: 20)).range(r: str.range(of: "red")!)
+    maker.backgroundColor(color: .cyan).full()
+    maker.backgroundColor(color: .magenta).range(r: str.range(of: "yellow")!)
+    maker.ph.line(space: 10).full()
+}
+```

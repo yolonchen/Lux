@@ -1,6 +1,6 @@
 //
 //  AttributesMaker.swift
-//  ABKit
+//  Lux
 //
 //  Created by 陈玉龙 on 2021/4/26.
 //
@@ -40,7 +40,7 @@ public class AttributeMaker {
         return paragraph
     }
     
-    var keys:[String] = []
+    private var keys:[String] = []
     
     public func range(r : Range<String.Index>) -> Void {
         for key in attributedKeys {

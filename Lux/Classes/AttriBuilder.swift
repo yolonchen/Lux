@@ -1,6 +1,6 @@
 //
 //  AttriBuilder.swift
-//  LiveDetection
+//  Lux
 //
 //  Created by 陈玉龙 on 2021/4/26.
 //

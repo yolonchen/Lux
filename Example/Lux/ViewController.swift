@@ -22,10 +22,7 @@ class ViewController: UIViewController {
             maker.foregroundColor(color: .red).font(f: UIFont.boldSystemFont(ofSize: 20)).range(r: str.range(of: "red")!)
             maker.backgroundColor(color: .cyan).full()
             maker.backgroundColor(color: .magenta).range(r: str.range(of: "yellow")!)
-            maker.backgroundColor(color: .green).full()
-//            maker.ph.line(space: 10).full()
-//            maker.ph.firstLineHead(indent: 4).full()
-//            maker.ph.hyphenation(factor: 3).full()
+            maker.ph.line(space: 10).full()
         }
         
         let label = UILabel.init()

@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/ts-cyl/Lux'
+  s.homepage         = 'https://github.com/yolonchen/Lux.git'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'ts-cyl' => 'yulong.chen@advance.ai' }
-  s.source           = { :git => 'https://github.com/ts-cyl/Lux.git', :tag => s.version.to_s }
+  s.author           = { 'yulong.chen' => 'yulong.chen@advance.ai' }
+  s.source           = { :git => 'https://github.com/yolonchen/Lux.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '11.0'
