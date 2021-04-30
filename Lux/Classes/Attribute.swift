@@ -122,5 +122,48 @@ enum AttributedKey {
         }
 
     }
+    
+    var code:Int {
+        switch self {
+        case .font(font: _):
+            return 0
+        case .foregroundColor(color: _):
+            return 1
+        case .backgroundColor(color: _):
+            return 2
+        case .ligature(n: _):
+            return 3
+        case .kern(f: _):
+            return 4
+            
+        case .strikethroughStyle(n: _):
+            return 5
+        case .underlineStyle(n: _):
+            return 6
+        case .strokeColor(color: _):
+            return 7
+        case .strokeWidth(f: _):
+            return 8
+        case .shadow(s: _):
+            return 9
+        case .textEffect(c: _):
+            return 10
+        case .attachment(m: _):
+            return 11
+        case .link(url: _):
+            return 12
+        case .baselineOffset(f: _):
+            return 13
+        case .underlineColor(color: _):
+            return 14
+        case .obliqueness(f: _):
+            return 15
+        case .expansion(f: _):
+            return 16
+        case .verticalGlyphForm(n: _):
+            return 17
+        }
+    }
+    
 }
 

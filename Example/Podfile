@@ -4,7 +4,7 @@ platform :ios, '11.0'
 
 target 'Lux_Example' do
   pod 'Lux', :path => '../'
-
+  pod "SnapKit"
   target 'Lux_Tests' do
     inherit! :search_paths
 

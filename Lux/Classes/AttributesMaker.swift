@@ -34,18 +34,20 @@ public class AttributeMaker {
         return self
     }
     
-    lazy var paragraphStyle = NSMutableParagraphStyle()
+    lazy var paragraph:LuxParagraph = LuxParagraph.init(string: self.string)
     
-    public func lineSpace(space:CGFloat) -> Self {
-        paragraphStyle.lineSpacing = space
-        return self
+    public var ph:LuxParagraph {
+        return paragraph
     }
     
-
+    var keys:[String] = []
+    
     public func range(r : Range<String.Index>) -> Void {
         for key in attributedKeys {
             let attribute = Attribute.init(range: r, key: key)
-            self.attributes["\(r.hashValue)"] = attribute
+            let key = "\(r.hashValue)_\(key.code)"
+            self.attributes[key] = attribute
+            keys.append(key)
         }
         attributedKeys.removeAll()
     }
@@ -55,17 +57,27 @@ public class AttributeMaker {
             let end   = self.string.endIndex
             let range = start..<end
             let attribute = Attribute.init(range: range, key: key)
-            self.attributes["\(range.hashValue)"] = attribute
+            let key = "\(range.hashValue)_\(key.code)"
+            self.attributes[key] = attribute
+            keys.append(key)
         }
         attributedKeys.removeAll()
     }
 
     fileprivate func attributeString() -> NSAttributedString {
         let attrStr = NSMutableAttributedString.init(string: self.string)
-        for (_ ,value) in self.attributes {
-            let attr:[NSAttributedString.Key:Any] = [value.key.luxAttributedKey : value.key.associatedValue]
-            attrStr.addAttributes(attr, range: value.range.ab_nsRange(in: self.string))
+        for key in self.keys {
+            if let value = self.attributes[key] {
+                let attr:[NSAttributedString.Key:Any] = [value.key.luxAttributedKey : value.key.associatedValue]
+                attrStr.addAttributes(attr, range: value.range.luxRange(in: self.string))
+            }
         }
+        
+        for (_ , value) in self.ph.attributes {
+            let attr:[NSAttributedString.Key:NSParagraphStyle] = [.paragraphStyle : value.ph]
+            attrStr.addAttributes(attr, range: value.range.luxRange(in: self.string))
+        }
+        
         return attrStr
     }
 }

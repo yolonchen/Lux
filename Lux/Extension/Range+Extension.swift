@@ -8,7 +8,7 @@
 import Foundation
 
 extension RangeExpression where Bound == String.Index  {
-    public func ab_nsRange<S: StringProtocol>(in string: S) -> NSRange {
+    public func luxRange<S: StringProtocol>(in string: S) -> NSRange {
         .init(self, in: string)
     }
 }

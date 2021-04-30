@@ -1,8 +1,14 @@
 PODS:
   - Lux (0.1.0)
+  - SnapKit (5.0.1)
 
 DEPENDENCIES:
   - Lux (from `../`)
+  - SnapKit
+
+SPEC REPOS:
+  trunk:
+    - SnapKit
 
 EXTERNAL SOURCES:
   Lux:
@@ -10,7 +16,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Lux: b20b15ac7ac426facdef17ceb350b94079c99273
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: 8f7ab45b930015377be38e314b26ec4f3cb0becc
+PODFILE CHECKSUM: d2376f6853a45eb80d6cd10a3eb1047360db1e9b
 
 COCOAPODS: 1.10.1
