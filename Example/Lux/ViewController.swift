@@ -14,8 +14,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        var str = "dfasdf".ab.makeAttributes { (maker) in
-            maker.foregroundColor(color: <#T##UIColor#>)
+        var str = "dfasdf".lux.makeAttributes { (maker) in
+            maker.foregroundColor(color: .red).full()
         }
         
         

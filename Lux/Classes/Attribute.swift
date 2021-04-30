@@ -38,7 +38,7 @@ enum AttributedKey {
     case verticalGlyphForm(n:Int)
     
     
-    var nsAttributedKey:NSAttributedString.Key {
+    var luxAttributedKey:NSAttributedString.Key {
         switch self {
         case .font(font: _):
             return .font

@@ -8,7 +8,7 @@
 import UIKit
 
 public extension String {
-    public var ab:AttributesDSL {
+    public var lux:AttributesDSL {
         return AttributesDSL.init(string: self)
     }
 }

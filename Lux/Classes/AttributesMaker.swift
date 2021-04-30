@@ -63,7 +63,7 @@ public class AttributeMaker {
     fileprivate func attributeString() -> NSAttributedString {
         let attrStr = NSMutableAttributedString.init(string: self.string)
         for (_ ,value) in self.attributes {
-            let attr:[NSAttributedString.Key:Any] = [value.key.nsAttributedKey : value.key.associatedValue]
+            let attr:[NSAttributedString.Key:Any] = [value.key.luxAttributedKey : value.key.associatedValue]
             attrStr.addAttributes(attr, range: value.range.ab_nsRange(in: self.string))
         }
         return attrStr
