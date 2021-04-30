@@ -18,8 +18,8 @@ class ViewController: UIViewController {
         let str = "这是一个测试字符串呀,yellow,red,想要很长loooooooooooooog很长，能够换行，呵呵呵"
         let attr = str.lux.makeAttributes { (maker) in
             maker.foregroundColor(color: .orange).full()
-            maker.foregroundColor(color: .yellow).range(r: str.range(of: "yellow")!)
-            maker.foregroundColor(color: .red).font(f: UIFont.boldSystemFont(ofSize: 20)).range(r: str.range(of: "red")!)
+            maker.foregroundColor(color: .yellow).kern(f: 10).range(r: str.range(of: "yellow")!)
+            maker.foregroundColor(color: .red).obliqueness(f: 0.5).font(f: UIFont.boldSystemFont(ofSize: 20)).range(r: str.range(of: "red")!)
             maker.backgroundColor(color: .cyan).full()
             maker.backgroundColor(color: .blue).at(first: "很")
             maker.foregroundColor(color: .purple).at(all: "o")

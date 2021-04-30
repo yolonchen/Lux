@@ -33,6 +33,22 @@ public class AttributeMaker {
         attributedKeys.append(.backgroundColor(color: color))
         return self
     }
+    //???? 我也不知道这是个啥
+    public func ligature(n:Int) -> Self {
+        attributedKeys.append(.ligature(n: NSNumber.init(value: n)))
+        return self
+    }
+    //字符间距
+    public func kern(f:Float) -> Self {
+        attributedKeys.append(.kern(f: NSNumber.init(value: f)))
+        return self
+    }
+    
+    //倾斜度
+    public func obliqueness(f:Float) -> Self {
+        attributedKeys.append(.obliqueness(f: NSNumber.init(value: f)))
+        return self
+    }
     
     lazy var paragraph:LuxParagraph = LuxParagraph.init(string: self.string)
     
