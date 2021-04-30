@@ -7,12 +7,19 @@
 //
 
 import UIKit
-
+import Lux
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        var str = "dfasdf".ab.makeAttributes { (maker) in
+            maker.foregroundColor(color: <#T##UIColor#>)
+        }
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
