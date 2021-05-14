@@ -38,6 +38,11 @@ public class LuxParagraph {
         return self
     }
     
+    public func head(indent:CGFloat) -> Self {
+        paragraph.headIndent = indent
+        return self
+    }
+    
     public func tail(indent:CGFloat) -> Self{
         paragraph.tailIndent = indent
         return self
@@ -85,9 +90,9 @@ public class LuxParagraph {
     
     lazy var attributes:[String:PhVlaue] = [:]
     
-    public func range(r : Range<String.Index>) -> Void {
-        self.attributes["\(r.hashValue)"] = PhVlaue.init(ph: self.paragraph, range: r)
-    }
+//    public func range(r : Range<String.Index>) -> Void {
+//        self.attributes["\(r.hashValue)"] = PhVlaue.init(ph: self.paragraph, range: r)
+//    }
     
     public func full() -> Void {
         let start = self.string.startIndex
