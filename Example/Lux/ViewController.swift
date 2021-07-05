@@ -15,16 +15,17 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let str = "这是一个测试字符串呀想要很长很长，能够换行，呵呵呵 \n 这是另一段文本呀，首先换个行吧，嗯嗯嗯嗯嗯"
+        let str = "Core Text provides a low-level programming interface for laying out text and handling fonts. The Core Text layout engine is designed for high performance, ease of use, and close integration with Core Foundation. \nThe text layout API provides high-quality typesetting, including character-to-glyph conversion, with ligatures, kerning, and so on. The complementary Core Text font technology provides automatic font substitution (cascading), font descriptors and collections, easy access to font metrics and glyph data, and many other features."
         let attr = str.lux.makeAttributes { (maker) in
             maker.foregroundColor(color: .orange).full()
 //            maker.foregroundColor(color: .yellow).range(r: str.range(of: "yellow")!)
 //            maker.foregroundColor(color: .red).range(r: str.range(of: "red")!)
             maker.backgroundColor(color: .cyan).full()
-            maker.backgroundColor(color: .blue).at(first: "很")
+            maker.backgroundColor(color: .blue).strikethroughStyle(style: 1).at(first: "and")
+            
 //            maker.foregroundColor(color: .purple).at(all: "o")
 //            maker.backgroundColor(color: .magenta).range(r: str.range(of: "yellow")!)
-            maker.ph.firstLineHead(indent: 20).paragraph(space: 20).full()
+            maker.ph.firstLineHead(indent: 20).head(indent: 10).paragraph(space: 20).minimumLine(height: 30).full()
             
             
 //            maker.ph.maximumLine(height: 20).full()

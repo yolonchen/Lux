@@ -33,6 +33,12 @@ public class AttributeMaker {
         attributedKeys.append(.backgroundColor(color: color))
         return self
     }
+    
+    public func strikethroughStyle(style:Int) -> Self {
+        attributedKeys.append(.strikethroughStyle(n: style))
+        return self
+    }
+    
     //???? 我也不知道这是个啥
     public func ligature(n:Int) -> Self {
         attributedKeys.append(.ligature(n: NSNumber.init(value: n)))
@@ -51,6 +57,8 @@ public class AttributeMaker {
     }
     
     lazy var paragraph:LuxParagraph = LuxParagraph.init(string: self.string)
+    
+//    lazy var attachment:NSTextAttachment = NSTextAttachment.init()
     
     public var ph:LuxParagraph {
         return paragraph
