@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'Lux'
+  s.name             = 'Luxor'
   s.version          = '1.0.0'
   s.summary          = 'convenient create a attribute string'
   s.swift_versions   = '4.0'
