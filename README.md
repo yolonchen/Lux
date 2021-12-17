@@ -22,7 +22,7 @@ pod 'Lux'
 
 ## Author
 
-yulong.chen, yulong.chen@advance.ai
+yulong.chen, ts_cyl@163.com
 
 ## License
 
